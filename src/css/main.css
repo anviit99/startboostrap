@@ -1,0 +1,670 @@
+/**
+   * @param $direction: horizontal vertical both
+   example : @include center(both) || @include center(horizontal) || @include center(vertical)
+   */
+/* ===== Usage ===== */
+/* ===== Usage ===== */
+:root {
+  --mainColor: #ff9800; }
+
+* {
+  padding: 0;
+  margin: 0; }
+
+html {
+  scroll-behavior: smooth; }
+
+ul,
+li {
+  list-style-type: none; }
+
+a {
+  text-decoration: none; }
+
+h4 {
+  font-size: 1.5rem; }
+
+@media only screen and (max-width: 375px) {
+  p {
+    font-size: 16px; } }
+
+textarea {
+  resize: none; }
+
+.hidden-scroll-y {
+  overflow-y: hidden; }
+
+/* ======================= 2, Header ======================= */
+.header {
+  position: fixed;
+  background-color: #2c3e50;
+  width: 100%;
+  z-index: 10; }
+  .header__top {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    transition: 0.5s;
+    flex-basis: 100%;
+    padding: 26px 0; }
+    .header__top.section {
+      transition: 0.5s;
+      padding: 10px 0; }
+    @media only screen and (max-width: 991.8px) {
+      .header__top {
+        flex-wrap: wrap; } }
+    @media only screen and (max-width: 425px) {
+      .header__top {
+        font-size: 13px; } }
+    @media only screen and (max-width: 375px) {
+      .header__top {
+        padding: 10px 0; } }
+    @media only screen and (max-width: 320px) {
+      .header__top {
+        padding: 10px 0; } }
+    .header__top-btn {
+      display: none;
+      padding: 12.8px;
+      background-color: #1abc9c;
+      border: 1px solid #1abc9c;
+      border-radius: 0.5rem;
+      text-transform: uppercase;
+      color: white;
+      font-weight: 700;
+      font-family: 'Montserrat', sans-serif;
+      outline: none; }
+      @media only screen and (max-width: 991.8px) {
+        .header__top-btn {
+          display: block; } }
+      @media only screen and (max-width: 375px) {
+        .header__top-btn {
+          padding: 10px;
+          font-size: 11px; } }
+    .header__top-logo {
+      display: flex;
+      align-items: center;
+      color: white;
+      height: 52px;
+      font-size: 1.75em;
+      font-family: 'Montserrat', sans-serif;
+      text-transform: uppercase;
+      font-weight: bold;
+      transition: 0.5s;
+      font-weight: 700; }
+      @media only screen and (max-width: 375px) {
+        .header__top-logo {
+          font-size: 20px; } }
+      @media only screen and (max-width: 320px) {
+        .header__top-logo {
+          padding-left: 0; } }
+      .header__top-logo.logo__section {
+        font-size: 24px;
+        transition: 0.5s; }
+        @media only screen and (max-width: 375px) {
+          .header__top-logo.logo__section {
+            font-size: 20px; } }
+    .header__top-list {
+      display: flex; }
+      @media only screen and (max-width: 991.8px) {
+        .header__top-list {
+          max-height: 0vh;
+          overflow: hidden;
+          background-color: #2c3e50;
+          width: 100%;
+          flex-direction: column;
+          transition: all ease-in-out 0.5s; } }
+      .header__top-list.active {
+        max-height: 100vh; }
+      @media only screen and (max-width: 375px) {
+        .header__top-list {
+          top: 71px; } }
+      @media only screen and (max-width: 320px) {
+        .header__top-list {
+          top: 104px; } }
+      @media only screen and (max-width: 991.8px) {
+        .header__top-list .top-list__item {
+          padding: 15px 0; } }
+      .header__top-list .top-list__item.action {
+        background-size: 4px 50px; }
+      .header__top-list .list__item-link {
+        color: white;
+        padding: 16px;
+        font-family: 'Montserrat', sans-serif;
+        text-transform: uppercase;
+        font-weight: 700; }
+        @media only screen and (max-width: 991.8px) {
+          .header__top-list .list__item-link {
+            padding: 0; } }
+        .header__top-list .list__item-link:hover {
+          color: #1abc9c;
+          text-decoration: none; }
+        .header__top-list .list__item-link:active {
+          background-color: #1abc9c;
+          color: white;
+          border-radius: 5px; }
+          .header__top-list .list__item-link:active:hover {
+            color: white; }
+        .header__top-list .list__item-link.showColor {
+          color: #fff;
+          background-color: #1abc9c;
+          border-radius: 5px; }
+          @media only screen and (max-width: 991.8px) {
+            .header__top-list .list__item-link.showColor {
+              background-color: transparent; } }
+          .header__top-list .list__item-link.showColor:hover {
+            color: white; }
+
+/*====================== 5, Footer ======================*/
+.footer {
+  background-color: #2c3e50;
+  padding: 80px 0; }
+  @media only screen and (max-width: 375px) {
+    .footer {
+      padding: 1.5rem 0; } }
+  .footer__bot {
+    color: white;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    line-height: 2; }
+    @media only screen and (max-width: 375px) {
+      .footer__bot {
+        font-size: 1.7rem; } }
+  .footer__detail {
+    color: white;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    line-height: 1.5;
+    word-spacing: 3px; }
+    @media only screen and (max-width: 991.8px) {
+      .footer__detail {
+        margin-bottom: 20px; } }
+    @media only screen and (max-width: 375px) {
+      .footer__detail {
+        font-size: 16px; } }
+    .footer__detail-link {
+      color: #1abc9c;
+      font-family: 'Lato', sans-serif; }
+      .footer__detail-link:hover {
+        text-decoration: #1abc9c; }
+  .footer__icon {
+    height: 60%;
+    display: flex;
+    align-items: center;
+    margin: 0px 55px;
+    justify-content: space-between; }
+    @media only screen and (max-width: 991.8px) {
+      .footer__icon {
+        margin: 0 200px;
+        margin-bottom: 20px; } }
+    @media only screen and (max-width: 767px) {
+      .footer__icon {
+        margin: 0 120px; } }
+    @media only screen and (max-width: 510px) {
+      .footer__icon {
+        margin: 0 70px; } }
+    @media only screen and (max-width: 410px) {
+      .footer__icon {
+        margin: 0 20px; } }
+    @media only screen and (max-width: 375px) {
+      .footer__icon {
+        margin: 0 20px 20px 20px; } }
+    .footer__icon-item {
+      color: white;
+      font-size: 25px;
+      height: 52px;
+      width: 52px;
+      border: 2px solid white;
+      border-radius: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      @media only screen and (max-width: 375px) {
+        .footer__icon-item {
+          font-size: 20px;
+          height: 45px;
+          width: 45px; } }
+      .footer__icon-item:hover {
+        background-color: white;
+        transition: 0.4s; }
+        .footer__icon-item:hover i {
+          color: black;
+          transition: 0.4s; }
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1050;
+  display: none;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  outline: 0;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: 0.5s; }
+  .modal__dialog {
+    position: relative;
+    background-color: #fefefe;
+    margin: 1.75rem auto;
+    width: 90%;
+    border-radius: 0.75rem;
+    animation-name: animationModal;
+    animation-duration: 0.5s; }
+    @media only screen and (max-width: 576px) {
+      .modal__dialog {
+        max-width: 500px;
+        margin: 1.75rem auto; } }
+    .modal__dialog-close {
+      position: absolute;
+      z-index: 1;
+      right: 1.5rem;
+      top: 1rem;
+      font-size: 3rem;
+      line-height: 3rem;
+      color: #1abc9c;
+      opacity: 1;
+      padding: 0;
+      background-color: transparent;
+      border: 0;
+      float: right;
+      overflow: visible; }
+    .modal__dialog-action .modal__content {
+      position: relative;
+      flex: 1 1 auto;
+      text-align: center;
+      pointer-events: auto;
+      padding: 64px 16px; }
+      .modal__dialog-action .modal__content > img {
+        border-radius: 0.5rem;
+        margin-bottom: 3rem;
+        width: 100%; }
+      .modal__dialog-action .modal__content .modal__name {
+        font-size: 2.25rem;
+        line-height: 2rem;
+        color: #2c3e50;
+        text-transform: uppercase;
+        margin-bottom: 0;
+        font-weight: 700;
+        margin-top: 0; }
+      .modal__dialog-action .modal__content .modal__sign {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 1rem;
+        margin: 20px 0 24px 0; }
+        .modal__dialog-action .modal__content .modal__sign-line {
+          background: #2c3e50;
+          width: 100%;
+          max-width: 7rem;
+          height: 0.25rem;
+          border-radius: 1rem; }
+          @media only screen and (max-width: 576px) {
+            .modal__dialog-action .modal__content .modal__sign-line {
+              width: 7rem;
+              height: 4px; } }
+          @media only screen and (max-width: 320px) {
+            .modal__dialog-action .modal__content .modal__sign-line {
+              width: 6rem; } }
+        .modal__dialog-action .modal__content .modal__sign-icon {
+          color: #2c3e50;
+          font-size: 2rem;
+          margin: 0 16px; }
+      .modal__dialog-action .modal__content .modal__text {
+        margin-bottom: 3rem;
+        pointer-events: auto;
+        text-align: center;
+        font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #212529; }
+      .modal__dialog-action .modal__content .modal__button {
+        color: #fff;
+        background-color: #1abc9c;
+        border-color: #1abc9c;
+        display: inline-block;
+        font-weight: 400;
+        text-align: center;
+        vertical-align: middle;
+        border: 0.125rem solid transparent;
+        padding: 0.375rem 0.75rem;
+        font-size: 1rem;
+        line-height: 1.5;
+        border-radius: 0.5rem;
+        transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
+        .modal__dialog-action .modal__content .modal__button > svg {
+          width: 0.6875em;
+          margin-right: 0.25rem; }
+
+.tranfrom {
+  display: block; }
+
+/* ======================= 3, Banner ======================= */
+.banner {
+  background-color: #1abc9c;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 200px 0 96px; }
+  @media only screen and (max-width: 375px) {
+    .banner {
+      padding: 104px 0 2.5rem 0; } }
+  .banner__top {
+    text-align: center; }
+    .banner__top-img {
+      width: 240px;
+      height: 255px;
+      margin-bottom: 48px;
+      text-align: center; }
+      @media only screen and (max-width: 375px) {
+        .banner__top-img {
+          margin-bottom: 17px;
+          width: 198px;
+          height: 210px; } }
+    .banner__top-heading {
+      text-transform: uppercase;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 64px;
+      color: white;
+      line-height: 1; }
+      @media only screen and (max-width: 375px) {
+        .banner__top-heading {
+          font-size: 1.7rem; } }
+    .banner__top-line {
+      display: flex;
+      width: 100%;
+      margin: 1.25rem 0 1.5rem;
+      justify-content: center;
+      align-items: center; }
+      @media only screen and (max-width: 375px) {
+        .banner__top-line {
+          margin: 1rem 0 1.5rem; } }
+      .banner__top-line .top-line__item {
+        width: 100%;
+        max-width: 7rem;
+        height: 0.25rem;
+        background-color: white;
+        border-radius: 1rem; }
+        @media only screen and (max-width: 375px) {
+          .banner__top-line .top-line__item {
+            max-width: 6rem; } }
+        .banner__top-line .top-line__item:first-child {
+          margin-right: 1rem; }
+        .banner__top-line .top-line__item:last-child {
+          margin-left: 1rem; }
+      .banner__top-line .top-line__icon i {
+        color: white;
+        font-size: 31px; }
+        @media only screen and (max-width: 375px) {
+          .banner__top-line .top-line__icon i {
+            font-size: 25px; } }
+    .banner__top-content {
+      font-size: 24px;
+      font-family: 'Lato', sans-serif;
+      color: white; }
+
+/* ======================= 4.1, Portfolio ======================= */
+.section__top {
+  padding: 96px 0 48px 0; }
+  @media only screen and (max-width: 375px) {
+    .section__top {
+      padding: 2.5rem 0 1.5rem 0; } }
+  .section__top .section__heading {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    line-height: 0.8;
+    color: #2c3e50; }
+    @media only screen and (max-width: 375px) {
+      .section__top .section__heading {
+        font-size: 36px; } }
+  .section__top .section__line {
+    display: flex;
+    width: 100%;
+    height: 48px;
+    margin: 1.25rem 0 1.5rem;
+    justify-content: center;
+    align-items: center; }
+    @media only screen and (max-width: 375px) {
+      .section__top .section__line {
+        margin: 1rem 0 1.5rem; } }
+    .section__top .section__line-item {
+      width: 100%;
+      max-width: 7rem;
+      height: 0.25rem;
+      background-color: #2c3e50;
+      border-radius: 1rem; }
+      .section__top .section__line-item:first-child {
+        margin-right: 1rem; }
+      .section__top .section__line-item:last-child {
+        margin-left: 1rem; }
+      @media only screen and (max-width: 375px) {
+        .section__top .section__line-item {
+          max-width: 6rem; } }
+    .section__top .section__line-icon i {
+      font-size: 31px;
+      color: #2c3e50; }
+      @media only screen and (max-width: 375px) {
+        .section__top .section__line-icon i {
+          font-size: 25px; } }
+  .section__top-item {
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 48px;
+    border-radius: 0.5rem;
+    width: 100%; }
+    .section__top-item .top-item__over {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      overflow: hidden;
+      background-color: rgba(26, 188, 156, 0.9);
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .section__top-item .top-item__over i {
+        font-size: 50px;
+        color: rgba(222, 226, 225, 0.966); }
+      .section__top-item .top-item__over:hover {
+        opacity: 1;
+        transition: 0.5s;
+        transform: scale(2); }
+    .section__top-item img {
+      width: 100%;
+      height: 100%;
+      display: block; }
+
+/* ======================= 4.2, About ======================= */
+.section__bot {
+  background-color: #1abc9c;
+  padding: 96px 0 2rem 0; }
+  .section__bot .section__heading {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    line-height: 0.8; }
+    @media only screen and (max-width: 375px) {
+      .section__bot .section__heading {
+        font-size: 36px; } }
+  .section__bot .section__line {
+    display: flex;
+    width: 100%;
+    height: 48px;
+    margin: 1.25rem 0 1.5rem;
+    justify-content: center;
+    align-items: center; }
+    @media only screen and (max-width: 375px) {
+      .section__bot .section__line {
+        margin: 1rem 0 1.5rem; } }
+    .section__bot .section__line-item {
+      width: 100%;
+      max-width: 7rem;
+      height: 0.25rem;
+      background-color: #212529;
+      border-radius: 1rem;
+      background-color: white; }
+      .section__bot .section__line-item:first-child {
+        margin-right: 1rem; }
+      .section__bot .section__line-item:last-child {
+        margin-left: 1rem; }
+      @media only screen and (max-width: 375px) {
+        .section__bot .section__line-item {
+          max-width: 6rem; } }
+    .section__bot .section__line-icon i {
+      font-size: 31px;
+      color: white; }
+      @media only screen and (max-width: 375px) {
+        .section__bot .section__line-icon i {
+          font-size: 25px; } }
+  .section__bot .lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+    font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    padding-bottom: 1.5rem;
+    line-height: 1.5;
+    margin: 0 9px; }
+  .section__bot h2,
+  .section__bot p {
+    color: white; }
+  .section__bot-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 24px; }
+    .section__bot-btn .bot-btn__item {
+      width: auto;
+      height: auto;
+      border: 0.125rem solid white;
+      padding: 16px 28px;
+      border-radius: 0.5rem;
+      color: white;
+      font-family: 'Lato', sans-serif;
+      font-size: 20px;
+      line-height: 1.5; }
+      .section__bot-btn .bot-btn__item:hover {
+        color: black;
+        background-color: white;
+        transition: 1s; }
+        .section__bot-btn .bot-btn__item:hover i {
+          color: black;
+          transition: 1s; }
+
+.section__form {
+  padding: 96px 0; }
+  .section__form .section__heading {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    line-height: 0.8;
+    color: #2c3e50; }
+    @media only screen and (max-width: 375px) {
+      .section__form .section__heading {
+        font-size: 36px; } }
+  .section__form .section__line {
+    display: flex;
+    width: 100%;
+    height: 48px;
+    margin: 1.25rem 0 1.5rem;
+    justify-content: center;
+    align-items: center; }
+    @media only screen and (max-width: 375px) {
+      .section__form .section__line {
+        margin: 1rem 0 1.5rem; } }
+    .section__form .section__line-item {
+      width: 100%;
+      max-width: 7rem;
+      height: 0.25rem;
+      background-color: #2c3e50;
+      border-radius: 1rem; }
+      .section__form .section__line-item:first-child {
+        margin-right: 1rem; }
+      .section__form .section__line-item:last-child {
+        margin-left: 1rem; }
+      @media only screen and (max-width: 375px) {
+        .section__form .section__line-item {
+          max-width: 6rem; } }
+    .section__form .section__line-icon i {
+      font-size: 31px;
+      color: #2c3e50; }
+      @media only screen and (max-width: 375px) {
+        .section__form .section__line-icon i {
+          font-size: 25px; } }
+  .section__form form .form-group__control {
+    width: 100%;
+    height: 100%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid rgba(230, 230, 230, 0.877);
+    padding: 33px 0px 33px 5px;
+    outline: none;
+    font-size: 1.5em; }
+    .section__form form .form-group__control::placeholder {
+      font-size: 25px;
+      font-family: 'Lato', sans-serif;
+      color: #6c757d; }
+  .section__form form .form-contact__btn-send {
+    color: #fff;
+    background-color: #1abc9c;
+    border-radius: 0.5rem;
+    border: solid #1abc9c;
+    padding: 17px 30px;
+    margin-top: 20px;
+    font-size: 17px;
+    font-family: 'Lato', sans-serif;
+    opacity: 0.8; }
+    .section__form form .form-contact__btn-send:hover {
+      opacity: 1;
+      transition: 0.5s;
+      cursor: pointer; }
+
+/* ======================= 6, Copyrigth =============== */
+.copyrigth {
+  background-color: #1a252f;
+  text-align: center;
+  padding: 24px 0; }
+  .copyrigth__end small {
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    font-weight: 400; }
+
+.btnScroll {
+  display: none; }
+  .btnScroll__link {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: rgba(33, 37, 41, 0.5);
+    z-index: 100;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .btnScroll__link i {
+      color: white; }
+  @media only screen and (max-width: 991.8px) {
+    .btnScroll {
+      display: none;
+      transition: 0.5s; }
+      .btnScroll.btnScrolls {
+        display: block; } }
+
+/*# sourceMappingURL=main.css.map */

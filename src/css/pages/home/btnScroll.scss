@@ -1,0 +1,26 @@
+.btnScroll {
+    display: none;
+    &__link {
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        width: 3.5rem;
+        height: 3.5rem;
+        background-color: rgba(33, 37, 41, 0.5);
+        z-index: 100;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        i {
+            color: white;
+        }
+    }
+    @include max-breakpoint(991.8) {
+        display: none;
+        transition: 0.5s;
+        &.btnScrolls {
+            display: block;
+        }
+    }
+}

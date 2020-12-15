@@ -1,0 +1,30 @@
+// -------------- Banner -------------
+.banner {
+  padding-top: 60px;
+  background: #1abc9c;
+  text-align: center;
+  color: #ffffff;
+  padding-bottom: 6rem;
+  &__avt {
+    img {
+      width: 15rem;
+      margin: 50px;
+    }
+  }
+  &__text-header {
+    font-size: 2.75rem;
+    line-height: 2.75rem;
+    margin-bottom: 20px;
+    @include min-breakpoint(992) {
+      font-size: 4rem;
+      line-height: 3.5rem;
+    }
+  }
+  &__text-footer {
+    font-size: 1.25rem;
+    font-weight: 400;
+    @include min-breakpoint(992) {
+      font-size: 1.5rem;
+    }
+  }
+}

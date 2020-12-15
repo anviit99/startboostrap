@@ -1,0 +1,38 @@
+// ===============7, footer ================
+
+.footer {
+  background: #2c3e50;
+  padding: 5rem 0;
+  text-align: center;
+  color: #fff;
+  font-size: 1.25rem !important;
+  font-weight: 300;
+  .btn__social {
+    display: inline-flex;
+    border: 2px solid #f8f9fa;
+    border-radius: 100%;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    width: 53px;
+    height: 53px;
+    transition: var(--main-transition);
+    &:hover {
+      color: #212529;
+      background-color: #f8f9fa;
+      border-color: #f8f9fa;
+      text-decoration: none;
+    }
+  }
+  &__lead {
+    font-weight: 400;
+    a {
+      color: #1abc9c;
+      &:hover {
+        color: #117964;
+        text-decoration: underline;
+      }
+    }
+  }
+}

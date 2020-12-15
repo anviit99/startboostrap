@@ -1,0 +1,35 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+ul,
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+p {
+    @include max-breakpoint(375) {
+        font-size: 16px;
+    }
+}
+
+textarea {
+    resize: none;
+}
+
+.hidden-scroll-y {
+    overflow-y: hidden;
+}

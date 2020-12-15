@@ -1,0 +1,142 @@
+/* ======================= 2, Header ======================= */
+
+.header {
+    position: fixed;
+    background-color: #2c3e50;
+    width: 100%;
+    z-index: 10;
+    &__top {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        transition: 0.5s;
+        flex-basis: 100%;
+        padding: 26px 0;
+        &.section {
+            transition: 0.5s;
+            padding: 10px 0;
+        }
+        @include max-breakpoint(991.8) {
+            flex-wrap: wrap;
+        }
+        @include max-breakpoint(425) {
+            font-size: 13px;
+        }
+        @include max-breakpoint(375) {
+            padding: 10px 0;
+        }
+        @include max-breakpoint(320) {
+            padding: 10px 0;
+        }
+        &-btn {
+            display: none;
+            padding: 12.8px;
+            background-color: #1abc9c;
+            border: 1px solid #1abc9c;
+            border-radius: 0.5rem;
+            text-transform: uppercase;
+            color: white;
+            font-weight: 700;
+            font-family: 'Montserrat', sans-serif;
+            outline: none;
+            @include max-breakpoint(991.8) {
+                display: block;
+            }
+            @include max-breakpoint(375) {
+                padding: 10px;
+                font-size: 11px;
+            }
+        }
+        &-logo {
+            display: flex;
+            align-items: center;
+            color: white;
+            height: 52px;
+            font-size: 1.75em;
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            font-weight: bold;
+            transition: 0.5s;
+            font-weight: 700;
+            @include max-breakpoint(375) {
+                font-size: 20px;
+            }
+            @include max-breakpoint(320) {
+                padding-left: 0;
+            }
+            &.logo__section {
+                font-size: 24px;
+                transition: 0.5s;
+                @include max-breakpoint(375) {
+                    font-size: 20px;
+                }
+            }
+        }
+        &-list {
+            display: flex;
+            @include max-breakpoint(991.8) {
+                max-height: 0vh;
+                overflow: hidden;
+                background-color: #2c3e50;
+                width: 100%;
+                flex-direction: column;
+                transition: all ease-in-out 0.5s;
+            }
+            @include max-breakpoint(768) {}
+            &.active {
+                max-height: 100vh;
+            }
+            @include max-breakpoint(375) {
+                top: 71px;
+            }
+            @include max-breakpoint(320) {
+                top: 104px;
+            }
+            .top-list__item {
+                @include max-breakpoint(991.8) {
+                    padding: 15px 0;
+                }
+                &.action {
+                    background-size: 4px 50px;
+                }
+            }
+            .list__item {
+                &-link {
+                    color: white;
+                    padding: 16px;
+                    font-family: 'Montserrat', sans-serif;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    @include max-breakpoint(991.8) {
+                        padding: 0;
+                    }
+                    &:hover {
+                        color: #1abc9c;
+                        text-decoration: none;
+                    }
+                    &:active {
+                        background-color: #1abc9c;
+                        color: white;
+                        border-radius: 5px;
+                        &:hover {
+                            color: white;
+                        }
+                    }
+                    &.showColor {
+                        color: #fff;
+                        background-color: #1abc9c;
+                        border-radius: 5px;
+                        @include max-breakpoint(991.8) {
+                            background-color: transparent;
+                        }
+                        &:hover {
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

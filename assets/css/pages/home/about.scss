@@ -1,0 +1,54 @@
+// -------------5, about --------
+.about {
+  background: #1abc9c;
+  text-align: center;
+  padding: 6rem 0;
+  &__header {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    color: #ffffff;
+    @include min-breakpoint(992) {
+      font-size: 3rem;
+      line-height: 3rem;
+    }
+  }
+  .mr_left {
+    margin-left: auto !important;
+    text-align: left;
+    .lead {
+      font-size: 1.25rem;
+      font-weight: 400;
+      color: #ffffff;
+      margin-bottom: 16px;
+    }
+  }
+  .mr_right {
+    margin-right: auto !important;
+    text-align: left;
+    .lead {
+      font-size: 1.25rem;
+      font-weight: 400;
+      color: #ffffff;
+      margin-bottom: 16px;
+    }
+  }
+  &__download {
+    padding-top: 40px;
+    &-logo {
+      padding: 1rem 1.75rem;
+      border: 2px solid white;
+      color: white;
+      background: #1abc9c;
+      font-size: 1.25rem;
+      border-radius: 10px;
+      font-weight: 400;
+      transition: var(--main-transition);
+      &:hover {
+        background: #ffffff;
+        color: black;
+        cursor: pointer;
+        text-decoration: none;
+      }
+    }
+  }
+}

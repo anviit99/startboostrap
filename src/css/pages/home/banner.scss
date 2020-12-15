@@ -1,0 +1,77 @@
+/* ======================= 3, Banner ======================= */
+
+.banner {
+    background-color: #1abc9c;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 200px 0 96px;
+    @include max-breakpoint(375) {
+        padding: 104px 0 2.5rem 0;
+    }
+    &__top {
+        text-align: center;
+        &-img {
+            width: 240px;
+            height: 255px;
+            margin-bottom: 48px;
+            text-align: center;
+            @include max-breakpoint(375) {
+                margin-bottom: 17px;
+                width: 198px;
+                height: 210px;
+            }
+        }
+        &-heading {
+            text-transform: uppercase;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 64px;
+            color: white;
+            line-height: 1;
+            @include max-breakpoint(375) {
+                font-size: 1.7rem;
+            }
+        }
+        &-line {
+            display: flex;
+            width: 100%;
+            margin: 1.25rem 0 1.5rem;
+            justify-content: center;
+            align-items: center;
+            @include max-breakpoint(375) {
+                margin: 1rem 0 1.5rem;
+            }
+            .top-line__item {
+                width: 100%;
+                max-width: 7rem;
+                height: 0.25rem;
+                background-color: white;
+                border-radius: 1rem;
+                @include max-breakpoint(375) {
+                    max-width: 6rem;
+                }
+                &:first-child {
+                    margin-right: 1rem;
+                }
+                &:last-child {
+                    margin-left: 1rem;
+                }
+            }
+            .top-line__icon {
+                i {
+                    color: white;
+                    font-size: 31px;
+                    @include max-breakpoint(375) {
+                        font-size: 25px;
+                    }
+                }
+            }
+        }
+        &-content {
+            font-size: 24px;
+            font-family: 'Lato', sans-serif;
+            color: white;
+        }
+    }
+}

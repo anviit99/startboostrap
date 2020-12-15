@@ -1,0 +1,94 @@
+/* ======================= 4.2, About ======================= */
+
+.section {
+    &__bot {
+        background-color: #1abc9c;
+        padding: 96px 0 2rem 0;
+        .section__heading {
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 3rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            line-height: 0.8;
+            @include max-breakpoint(375) {
+                font-size: 36px;
+            }
+        }
+        .section__line {
+            display: flex;
+            width: 100%;
+            height: 48px;
+            margin: 1.25rem 0 1.5rem;
+            justify-content: center;
+            align-items: center;
+            @include max-breakpoint(375) {
+                margin: 1rem 0 1.5rem;
+            }
+            &-item {
+                width: 100%;
+                max-width: 7rem;
+                height: 0.25rem;
+                background-color: #212529;
+                border-radius: 1rem;
+                background-color: white;
+                &:first-child {
+                    margin-right: 1rem;
+                }
+                &:last-child {
+                    margin-left: 1rem;
+                }
+                @include max-breakpoint(375) {
+                    max-width: 6rem;
+                }
+            }
+            &-icon {
+                i {
+                    font-size: 31px;
+                    color: white;
+                    @include max-breakpoint(375) {
+                        font-size: 25px;
+                    }
+                }
+            }
+        }
+        .lead {
+            font-size: 1.25rem;
+            font-weight: 300;
+            font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            padding-bottom: 1.5rem;
+            line-height: 1.5;
+            margin: 0 9px;
+        }
+        h2,
+        p {
+            color: white;
+        }
+        &-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 24px;
+            .bot-btn__item {
+                width: auto;
+                height: auto;
+                border: 0.125rem solid white;
+                padding: 16px 28px;
+                border-radius: 0.5rem;
+                color: white;
+                font-family: 'Lato', sans-serif;
+                font-size: 20px;
+                line-height: 1.5;
+                &:hover {
+                    color: black;
+                    background-color: white;
+                    transition: 1s;
+                    i {
+                        color: black;
+                        transition: 1s;
+                    }
+                }
+            }
+        }
+    }
+}
